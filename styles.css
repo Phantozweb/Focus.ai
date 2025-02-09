@@ -1,0 +1,59 @@
+.suggestions-container {
+  margin-top: 2rem;
+  border-top: 1px solid rgba(255,255,255,0.1);
+  padding-top: 1.5rem;
+}
+
+.suggestion-btn {
+  display: block;
+  width: 100%;
+  padding: 1rem 1.2rem;
+  margin: 0.75rem 0;
+  background: linear-gradient(145deg, rgba(124,58,237,0.15), rgba(6,182,212,0.1));
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 1.2rem;
+  color: rgba(255,255,255,0.9);
+  text-align: left;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 0.95rem;
+  backdrop-filter: blur(12px);
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+  position: relative;
+}
+
+.suggestion-btn::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 1.2rem;
+  background: linear-gradient(120deg, rgba(124,58,237,0.1) 0%, rgba(6,182,212,0.05) 100%);
+  z-index: -1;
+}
+
+.suggestion-btn:hover {
+  background: linear-gradient(145deg, rgba(124,58,237,0.2), rgba(6,182,212,0.15));
+  border-color: rgba(255,255,255,0.2);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(124,58,237,0.25);
+}
+
+.suggestion-btn:active {
+  transform: translateY(0);
+}
+
+.suggestion-btn:before {
+  content: '→';
+  margin-right: 0.8rem;
+  color: var(--primary);
+  font-weight: bold;
+  opacity: 0.8;
+  transition: opacity 0.2s ease;
+}
+
+.suggestion-btn:hover:before {
+  opacity: 1;
+}
